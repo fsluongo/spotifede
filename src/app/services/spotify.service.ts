@@ -11,7 +11,7 @@ constructor( private http: HttpClient) { }
 getSpotify( request: string ){
     const url = `https://api.spotify.com/v1/${ request }`;
 
-    //El token es obtenido utilizando postman con las credenciales de cliente de SpotifyService, el mismo debe ser acutalizado luego de una hora.
+    //IMPORTANT: At line 16, repleace after 'Bearer ' with the updated token as explained at 'readme.me' file.
     const headers = new HttpHeaders({
           'Authorization': 'Bearer  BQCry9PFgHN7C_tRHeLhWclp9CfEDnSqMxWIlp7Q89ApEDq5I4sqtm8FZyPc-ssq0MOjTEUffCG_gtXlxj0'
     });
