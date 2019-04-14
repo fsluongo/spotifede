@@ -1,0 +1,20 @@
+<div class='row'>
+    <div class="col">
+        <input #input type="text" (keyup)="buscar(input.value)" class="form-control" placeholder="Ingrese el nombre de la canción">
+</div>
+
+<div class="card-columns">
+
+  <div *ngFor="let cancion of cancionesRet" class="card">
+    <img class="card-img-top" [src]="cancion.album.images[0].url" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title"> {{cancion.name}} </h5>
+      <p class="card-text">
+        <span *ngFor="let artista of cancion.artists" class=card-text>
+            {{ artista.name}}
+        </span>
+      </p>
+    </div>
+  </div>
+
+</div>
